@@ -3,12 +3,14 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 module.exports = {
     entry: path.join(__dirname, 'src', 'index.js'),
+    target: "node",
     output: {
         path: path.join(__dirname, 'build'),
         filename: 'index.bundle.js'
     },
     node: false,
     resolve: {
+        extensions: [".js", ".jsx", ".json"],
         modules: [path.resolve(__dirname, 'src'), 'node_modules']
     },
     devServer: {
