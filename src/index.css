@@ -1,3 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     color: red;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    line-height: 1.6;
+    margin-top: 15px;
+    text-align: center;
 }
+
+@media(max-width: 700px) {
+    body {
+        color: blue;
+    }
+}
+
+
+/* for centering placeholders */
+::-webkit-input-placeholder {
+    text-align: center;
+  }
+
+  :-moz-placeholder {
+    /* Firefox 18- */
+    text-align: center;
+  }
+
+  ::-moz-placeholder {
+    /* Firefox 19+ */
+    text-align: center;
+  }
+
+  :-ms-input-placeholder {
+    text-align: center;
+  }
