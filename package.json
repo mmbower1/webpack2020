@@ -1,15 +1,14 @@
 {
   "name": "webpack2020",
   "version": "1.0.0",
-  "description": "",
+  "description": "webpack2020 template",
   "main": "server/server.js",
   "scripts": {
-    "start": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --open node server",
-    "server": "nodemon server/server",
-    "src": "npm start --prefix src",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel-node ./node_modules/webpack/bin/webpack",
-    "dev": "concurrently \"npm run server\" \"npm run src\""
+    "start": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --open nodemon server/server.js",
+    "server": "nodemon server/server.js",
+    "src": "cd src && npm start",
+    "dev": "concurrently \"nodemon server.js\" \"npm run src\""
   },
   "keywords": [],
   "author": "",

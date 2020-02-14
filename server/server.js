@@ -32,6 +32,5 @@ app.use('/api/users', require('./routes/api/users'));
 
 app.listen(port, err => {
     if (err) throw err;
-    console.log(' ');
     console.log('>> webpack2020 Server running on port ' + port);
 });
