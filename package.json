@@ -5,9 +5,11 @@
   "main": "server/server.js",
   "scripts": {
     "start": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --open node server",
+    "server": "nodemon server/server",
+    "src": "npm start --prefix src",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel-node ./node_modules/webpack/bin/webpack",
-    "dev": "nodemon server/server"
+    "dev": "concurrently \"npm run server\" \"npm run src\""
   },
   "keywords": [],
   "author": "",
@@ -42,6 +44,11 @@
     "mongoose": "^5.9.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
     "styled-components": "^5.0.1"
   },
   "proxy": "http://localhost:5000"

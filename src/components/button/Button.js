@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom'
 
 const Button = () => {
     return (
         <div>
-            <button>
-                Button Component
-            </button>
+            <Link to='/login'>
+                Go to Login Page
+            </Link>
         </div>
     )
 }
